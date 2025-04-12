@@ -11,7 +11,7 @@
 				"SigningCertUrl": "EXAMPLE",
 				"MessageId": "95df01b4-ee98-5cb9-9903-4c221d41eb5e",
 				"Message": {
-					"filePath": "/done_transcribe/628137183923/3662883917937337731982-transcribe.json",
+					"filePath": "/done_scoring/628137183923/3662883917937337731982-scoring.json",
 					"bucket": "customer-call-management-ap-southeast-1"
 				},
 				"MessageAttributes": {
