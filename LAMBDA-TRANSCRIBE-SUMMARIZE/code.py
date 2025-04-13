@@ -49,7 +49,7 @@ def lambda_handler(event, context):
 def get_msisdn(filename):
     """ Get MSISDN Key
     params:
-        filename(str): Format s://<bucket-name>/staging/<msisdn>/<filename>
+        filename(str): Format s://<bucket-name>/<folder>/<msisdn>/<filename>
     
     Returns:
         msisdn(str)
@@ -63,13 +63,13 @@ def read_file_from_s3(Bucket, Key):
 
 
 def summarize(text):
-    response = requests.post("https://api.openai.com/v1/chat/completions", 
+    response = requests.post(f"{OPENAI_API_BASE_URL}/chat/completions", 
     headers= {
         "Authorization": "Bearer {}".format(OPENAI_API_KEY),
         "Content-Type": "application/json"
         },
     json={
-        "model": "gpt-4o",
+        "model": OPENAI_API_GPT_MODEL,
         "temperature": 0.5,
         "messages": [
             {
